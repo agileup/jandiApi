@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Account
+GET         /accounts            controllers.Application.listAccounts(offset: Int ?= 1, limit: Int ?= 5)
+GET         /account/:id         controllers.Application.getAccount(id: Long)
+#GET     /account/$id<[0-9]+>         controllers.Application.getAccount(id: Long)
+POST        /account             controllers.Application.saveAccounts
+GET        /save             controllers.Application.saveAccounts
+
+# swaggger
+#GET         /api-docs            @pl.matisoft.swagger.ApiHelpController.getResources
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.at(path="/public", file)
