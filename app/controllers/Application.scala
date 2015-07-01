@@ -28,7 +28,7 @@ object Application extends Controller {
   }
 
   def saveAccounts = Action(parse.text) { request =>
-    val textBody: String = request.body
+    //val textBody: String = request.body
 
     val now: Timestamp = new Timestamp(new java.util.Date().getTime)
 
